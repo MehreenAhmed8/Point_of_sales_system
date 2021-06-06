@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[Order] (
+    [OrderId] INT           IDENTITY (1, 1) NOT NULL,
+    [Date]    NVARCHAR (50) NULL,
+    [Total]   NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([OrderId] ASC)
+);
+
+
+CREATE TABLE [dbo].[OrderDetail] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [OrderId]  INT           NULL,
+    [ItemName] NVARCHAR (50) NULL,
+    [Quantity] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_OrderDetail_Order] FOREIGN KEY ([OrderId]) REFERENCES [dbo].[Order] ([OrderId])
+);

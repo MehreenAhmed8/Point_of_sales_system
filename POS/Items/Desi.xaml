@@ -1,0 +1,41 @@
+﻿<Page x:Class="POS.Items.Desi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POS.Items"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Desi">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+        <Grid  Background="AliceBlue">
+            <StackPanel>
+                <WrapPanel Height="180"  Margin="10,0,0,0">
+                    <Button Name="BBQ" Click="BBQ_Click" Margin="5">
+                        <Image Source="/images/bbq.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="Biryani" Click="Biryani_Click" Height="auto" Width="auto" Margin="5">
+                        <Image Source="/images/biryani.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+
+                <Separator Margin="5"></Separator>
+
+                <WrapPanel Height="180" Margin="10,0,10,0">
+                    <Button Name="ChickenCurry" Click="ChickenCurry_Click" Height="auto" Width="auto" Margin="5"   >
+                        <Image Source="/images/chickencurry.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="SiriPaye" Click="SiriPaye_Click" Height="auto" Width="auto" Margin="5"  >
+                        <Image Source="/images/siripaye.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+                <Separator Margin="5"></Separator>
+
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

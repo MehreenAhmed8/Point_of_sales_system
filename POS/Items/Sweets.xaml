@@ -1,0 +1,50 @@
+﻿<Page x:Class="POS.Items.Sweets"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POS.Items"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Sweets">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+        <Grid  Background="AliceBlue">
+            <StackPanel>
+                <WrapPanel Height="180"  Margin="10,0,0,0">
+                    <Button Name="Barfi" Click="Barfi_Click" Margin="5">
+                        <Image Source="/images/barfi.jpeg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="GulanJamun" Click="GulanJamun_Click" Height="auto" Width="auto" Margin="5">
+                        <Image Source="/images/gulabjanum.jpeg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+
+                <Separator Margin="5"></Separator>
+
+                <WrapPanel Height="180"  Margin="10,0,0,0">
+                    <Button Name="Jalebi"  Click="Jalebi_Click" Margin="5">
+                        <Image Source="/images/jalebi.jpeg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="Patisa" Click="Patisa_Click" Margin="5">
+                        <Image Source="/images/patisa.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel>
+                <Separator Margin="5"></Separator>
+                <WrapPanel Height="180"  Margin="10,0,0,0">
+                    <Button Name="Rasgullah" Click="Rasgullah_Click" Margin="5">
+                        <Image Source="/images/rasgullah.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="Rasmalai" Click="Rasmalai_Click" Margin="5">
+                        <Image Source="/images/rasmalai.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel>
+                <Separator Margin="5"></Separator>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

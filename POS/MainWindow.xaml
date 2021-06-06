@@ -1,0 +1,102 @@
+﻿<Window x:Class="POS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS"
+        mc:Ignorable="d"
+         Title="Point of Sales System" >
+    <Grid  Margin="1" Background="BlanchedAlmond">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="372*"></ColumnDefinition>
+            <ColumnDefinition Width="141*"></ColumnDefinition>
+            <ColumnDefinition Width="277*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Frame  Grid.Column="2" Grid.RowSpan="2" Name="F1"  Background="Black">
+        </Frame>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel Background="PaleGoldenrod" VerticalAlignment="Center" Margin="1">
+                <Button x:Name="Fruits" Content="Fruits" Click="Fruits_Click" Height="70" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Drinks" Content="Drinks" Click="Drinks_Click" Height="70" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Burgers" Content="Burgers" Click="Burgers_Click" Height="70" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Desi" Content="Desi" Height="70" Click="Desi_Click" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Chineese" Content="Chineese" Height="70" Click="Chinese_Click" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Naan" Content="Naan" Click="Naan_Click" Height="70" Background="Green"></Button>
+                <Separator  Height="5" Margin="5"/>
+                <Button x:Name="Sweet" Content="Sweet" Height="70" Click="Sweets_Click" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Vegetables" Content="Vegetables" Click="Vegetable_Click" Height="70" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+                <Button x:Name="Deserts" Content="Deserts" Click="Deserts_Click" Height="70" Background="Green"></Button>
+                <Separator Height="5" Margin="5"/>
+            </StackPanel>
+        </ScrollViewer>
+          <DataGrid  Name="datagrid" CanUserResizeColumns="False"  VirtualizingStackPanel.IsVirtualizing="False" 
+                               ScrollViewer.HorizontalScrollBarVisibility="Visible"  IsReadOnly="True"
+                               ScrollViewer.VerticalScrollBarVisibility="Auto"  CanUserAddRows="False" 
+                               AutoGenerateColumns="False" Grid.Column="0" >
+                        <DataGrid.Columns >
+                            <DataGridTextColumn Binding="{Binding Path= Items}" Header="Items" Width="*"> </DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Path=Price}"  Header="Price" Width="70"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Path=QTY}"    Header="QTY"   Width="50"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Path=Total}"  Header="Total" Width="80"></DataGridTextColumn>
+                            <DataGridTemplateColumn Header="Delete" Width="50" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate >
+                                        <Button Name="Delete" Content='X' FontSize="12" FontWeight="Bold" Background="Red" Click="Delete_Click">
+                                            <!--Image Source="/images/close.png"/-->
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto" Grid.Row="1">
+            <Border>
+                <StackPanel >
+                    <WrapPanel Background="Aqua" Width="auto" Margin="0,20,0,0">
+                        <Label Width="80">Sub Total</Label>
+                        <Label Name="subtotal" Margin="250,0,0,0" HorizontalAlignment="Right" Width="auto">0</Label>
+                    </WrapPanel>
+
+                    <WrapPanel Background="Orange"  Width="auto" Margin="0,20,0,0">
+                        <Label Width="80">Discount</Label>
+                        <Label Name="discount" Margin="250,0,0,0" HorizontalAlignment="Right" Width="auto">0</Label>
+                    </WrapPanel>
+
+                    <WrapPanel Background="Red"  Width="auto" Margin="0,20,0,0">
+                        <Label Width="80">Tax</Label>
+                        <Label Name="tax" Margin="250,0,0,0" Width="auto">0</Label>
+                    </WrapPanel>
+
+                    <WrapPanel Background="Yellow"  Width="auto" Margin="0,20,0,0">
+                        <Label Width="80">Total</Label>
+                        <Label Name="total" Margin="250,0,0,0" Width="auto">0</Label>
+                    </WrapPanel>
+
+                    <Separator Margin="10"></Separator>
+
+                    <WrapPanel  HorizontalAlignment="Stretch" Margin="50,0,0,0">
+                        <Button Background="LightBlue" Width="250" Height="30" Margin="10,0,20,0" Content="Print"  Click="Print_Click" />
+                        <Button Name="Clear"  Background="Red"       Width="90"  Height="30" Margin="10,0,0,0" Content="Clear" Click="Clear_Click" />
+                    </WrapPanel>
+
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Window>

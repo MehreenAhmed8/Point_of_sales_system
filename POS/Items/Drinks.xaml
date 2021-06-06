@@ -1,0 +1,49 @@
+﻿<Page x:Class="POS.Items.Drinks"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POS.Items"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Drinks">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+        <Grid  Background="AliceBlue">
+            <StackPanel>
+                <WrapPanel Height="180"  Margin="10,0,0,0">
+                    <Button Name="AlmondShake" Click="AlmondShake_Click"  Margin="5">
+                        <Image Source="/images/almondshake.jpeg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="AppleShake" Click="AppleShake_Click" Height="auto" Width="auto" Margin="5">
+                        <Image Source="/images/appleshake.jpeg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+
+                <Separator Margin="5"></Separator>
+
+                <WrapPanel Height="180" Margin="10,0,10,0">
+                    <Button Name="CokeRegular" Click="CokeRegular_Click" Height="auto" Width="auto" Margin="5"   >
+                        <Image Source="/images/coke.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="CokeTin" Click="CokeTin_Click" Height="auto" Width="auto" Margin="5"  >
+                        <Image Source="/images/coketin.jpeg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+                <Separator Margin="5"></Separator>
+                <WrapPanel Height="180" Margin="10,0,10,0">
+                    <Button Name="SpriteTin" Click="SpriteTin_Click" Height="auto" Width="auto" Margin="5"   >
+                        <Image Source="/images/spritetin.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="StawberryShake" Click="StawberryShake_Click" Height="auto" Width="auto" Margin="5"   >
+                        <Image Source="/images/stawberryshake.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,41 @@
+﻿<Page x:Class="POS.Items.Deserts"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POS.Items"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Deserts">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+
+        <Grid  Background="AliceBlue">
+            <StackPanel>
+                <WrapPanel Height="180"  Margin="10,0,0,0">
+                    <Button Name="CakeBite" Click="CakeBite_Click" Margin="5">
+                        <Image Source="/images/cakebite.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="CupCake" Click="CupCake_Click" Height="auto" Width="auto" Margin="5">
+                        <Image Source="/images/cupcake.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+
+                <Separator Margin="5"></Separator>
+
+                <WrapPanel Height="180" Margin="10,0,10,0">
+                    <Button Name="IceCream" Click="IceCream_Click" Height="auto" Width="auto" Margin="5"   >
+                        <Image Source="/images/icecream.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                    <Separator Margin="5"></Separator>
+                    <Button Name="Macroons" Click="Macroons_Click" Height="auto" Width="auto" Margin="5"  >
+                        <Image Source="/images/macroons.jpg" Height="auto" Width="auto"/>
+                    </Button>
+                </WrapPanel >
+                <Separator Margin="5"></Separator>
+                
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>
